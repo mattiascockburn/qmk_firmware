@@ -236,7 +236,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*|--------`-------`--------`--------`--------`--------`--------`--------`--------`--------`--------`-----------------|*/
     _______ ,KC_ACL2, KC_BTN2, _______, KC_BTN1, KC_ACL1, KC_WH_U, KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN4,    KC_BTN5     ,
 /*|---------`-------`--------`--------`--------`--------`--------`--------`--------`--------`--------`----------------|*/
-    _______  ,_______, _______, _______, KC_BTN3, _______, KC_WH_D, KC_BTN1, _______, _______, KC_BTN3,    _______    ,
+    _______  ,_______, _______, _______, KC_BTN3, _______, KC_WH_D, KC_BTN1, AG_T_R,  AG_T_N , KC_BTN3,    _______    ,
 /*|----------`-------`--------`--------`--------`--------`--------`--------`--------`--------`--------`---------------|*/
     _______   ,    _______    , _______ ,     _______    ,     _______     , _______ ,     _______     ,    _______   ),
 /*`-----------+---------------+---------+-------^^^------+-------^^^-------+---------+-----------------+--------------'*/
@@ -418,9 +418,9 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
       case KC_AG_TAB_C:
         return use_cmd ? MACRODOWN( D(LGUI),            T(W), END ) : MACRODOWN( D(LCTRL),            T(W), END );
       case KC_AG_TAB_N:
-        return use_cmd ? MACRODOWN( D(LGUI),            T(T), END ) : MACRODOWN( D(LCTRL),            T(T), END );
+        return use_cmd ? MACRODOWN( D(LGUI),            T(TAB), END ) : MACRODOWN( D(LCTRL),            T(TAB), END );
       case KC_AG_TAB_R:
-        return use_cmd ? MACRODOWN( D(LGUI), D(LSHIFT), T(T), END ) : MACRODOWN( D(LCTRL), D(LSHIFT), T(T), END );
+        return use_cmd ? MACRODOWN( D(LGUI), D(LSHIFT), T(TAB), END ) : MACRODOWN( D(LCTRL), D(LSHIFT), T(TAB), END );
     }
 
     return MACRO_NONE;
