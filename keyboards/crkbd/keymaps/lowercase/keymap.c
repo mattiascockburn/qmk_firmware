@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define CTL_ESC     CTL_T(KC_ESC)               // Tap for Esc, hold for Ctrl
 #define GUI_SEM     GUI_T(KC_SCLN)              // Tap for Semicolon, hold for GUI
 #define ALT_QUO     ALT_T(KC_QUOT)              // Tap for Quote, hold for Alt
+
 #define KC_CAD LALT(LCTL(KC_DEL))
 #define S_COPY LCTL(LSFT(KC_C))
 #define S_PASTE LCTL(LSFT(KC_V))
@@ -42,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM, KC_DOT, KC_SLSH,  KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(_RAISE),  LT( _TOUCHCURSOR, KC_ENT),     LT( _TOUCHCURSOR, KC_SPC),   MO(_LOWER), KC_RALT
+                                         MO(_RAISE), KC_LGUI, LT(_TOUCHCURSOR, KC_ENT), LT(_TOUCHCURSOR, KC_SPC), KC_RALT, MO(_LOWER)
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -54,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,                       KC_F11,  KC_F12, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, _______,  KC_ENT,     KC_BSPC,   MO(_ADJUST), KC_RALT
+                                          MO(_ADJUST), _______,  KC_ENT,     KC_BSPC,   KC_RALT, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -64,9 +65,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,  KC_GRV,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
+      KC_LSFT, XXXXXXX, XXXXXXX, S_COPY, S_PASTE, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(_ADJUST),  KC_ENT,     KC_BSPC, _______, KC_RALT
+                                          _______,   _______, KC_ENT,     KC_BSPC, KC_RALT, MO(_ADJUST)
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -78,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT
+                                          _______, _______,  _______,     _______, _______, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
