@@ -95,9 +95,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
     case JOHNBOY:
         if (record->event.pressed) {
-            SEND_STRING("John ist ein Poser und mag Leute flashen mit seinem Kram! ;-)\n");
         } else {
             // when keycode JOHNBOY is released
+            SEND_STRING("John ist ein Poser und mag Leute flashen mit seinem Kram! ;-)\n");
         }
         break;
     }
